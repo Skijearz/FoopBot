@@ -161,3 +161,7 @@ cython_debug/
 #.idea/
 lib/python3.10
 share/man
+db/foopDatabase.db-shm
+db/foopDatabase.db-wal
+db/foopDatabase.db-shm
+db/foopDatabase.db-wal
