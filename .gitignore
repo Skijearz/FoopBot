@@ -144,7 +144,7 @@ cython_debug/
 
 
 logs/
-.share/
+share/
 bin/
 config.py
 
