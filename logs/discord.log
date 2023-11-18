@@ -1,0 +1,206 @@
+[2023-08-09 02:23:05] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-08-09 02:23:05] [INFO    ] discord.client: logging in using static token
+[2023-08-09 02:23:27] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-08-09 02:23:27] [INFO    ] discord.client: logging in using static token
+[2023-08-09 02:24:00] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-08-09 02:24:00] [INFO    ] discord.client: logging in using static token
+[2023-08-09 02:24:10] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-08-09 02:24:10] [INFO    ] discord.client: logging in using static token
+[2023-08-09 02:24:38] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-08-09 02:24:38] [INFO    ] discord.client: logging in using static token
+[2023-08-09 02:25:04] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-08-09 02:25:04] [INFO    ] discord.client: logging in using static token
+[2023-08-09 02:26:14] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-08-09 02:26:14] [INFO    ] discord.client: logging in using static token
+[2023-08-09 02:26:17] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: e090bf1b00afc4c74984ded28a6d1200).
+[2023-08-09 02:26:57] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-08-09 02:26:57] [INFO    ] discord.client: logging in using static token
+[2023-08-09 02:26:58] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 9bad0203300d461f9a72862dfe9160ef).
+[2023-08-09 02:27:41] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-08-09 02:27:41] [INFO    ] discord.client: logging in using static token
+[2023-08-09 02:27:42] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 04ff411ebc7c0cceb0500e70e62430dd).
+[2023-08-09 02:28:20] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-08-09 02:28:20] [INFO    ] discord.client: logging in using static token
+[2023-08-09 02:28:22] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: dbc4febd3775874667bd90cabba77fda).
+[2023-08-09 02:32:56] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-08-09 02:32:56] [INFO    ] discord.client: logging in using static token
+[2023-08-09 02:32:58] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: f244fc873e5bf3af127039e824a8365f).
+[2023-08-09 02:34:10] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-08-09 02:34:10] [INFO    ] discord.client: logging in using static token
+[2023-08-09 02:34:12] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 18b06c3c7481b2ef985a0061094f5d66).
+[2023-08-09 02:34:48] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-08-09 02:34:48] [INFO    ] discord.client: logging in using static token
+[2023-08-09 02:34:50] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: da35d587022b72244a2e5f9a6fc4dcde).
+[2023-08-09 02:35:32] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-08-09 02:35:32] [INFO    ] discord.client: logging in using static token
+[2023-08-09 02:35:34] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 5b5c1d5887507a97641488a9c3191d89).
+[2023-08-09 02:36:02] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-08-09 02:36:02] [INFO    ] discord.client: logging in using static token
+[2023-08-09 02:36:34] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 8c5c159aaf039301834b7e7075e35b05).
+[2023-08-09 02:37:23] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-08-09 02:37:23] [INFO    ] discord.client: logging in using static token
+[2023-08-09 02:37:25] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 6ccdd6e26d5fb4a271e0fd9a2b2be7c4).
+[2023-08-09 02:38:09] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-08-09 02:38:09] [INFO    ] discord.client: logging in using static token
+[2023-08-09 02:38:11] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: d29c876c02dc678cccad3ed432d81dfb).
+[2023-08-09 02:38:38] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-08-09 02:38:38] [INFO    ] discord.client: logging in using static token
+[2023-08-09 02:39:11] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 1d4f379a5bc9824eabf789414c83569f).
+[2023-08-09 02:41:05] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-08-09 02:41:05] [INFO    ] discord.client: logging in using static token
+[2023-08-09 02:41:07] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 95112651df6fe3f043d84d57e235ee8b).
+[2023-08-09 02:41:55] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-08-09 02:41:55] [INFO    ] discord.client: logging in using static token
+[2023-08-09 02:41:57] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 127d0ca0e3e903c1ac9998400ead4119).
+[2023-08-09 02:43:39] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-08-09 02:43:39] [INFO    ] discord.client: logging in using static token
+[2023-08-09 02:43:41] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: a148c15513fb833487a0d521d90dbd00).
+[2023-08-09 02:46:34] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-08-09 02:46:34] [INFO    ] discord.client: logging in using static token
+[2023-08-09 02:46:36] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 4fe2a1fb7f67b5f69c9661bb388b9bdc).
+[2023-08-09 02:48:25] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-08-09 02:48:25] [INFO    ] discord.client: logging in using static token
+[2023-08-09 02:48:26] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 18a83c6221c6270cf0895260284b9b18).
+[2023-08-09 02:50:28] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-08-09 02:50:28] [INFO    ] discord.client: logging in using static token
+[2023-08-09 02:50:30] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 96ee394c2f560d7e83e3546e1bd10478).
+[2023-08-09 02:52:48] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-08-09 02:52:48] [INFO    ] discord.client: logging in using static token
+[2023-08-09 02:52:49] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 750c3bb04bfdf4eaaec3463b5aee9806).
+[2023-08-09 02:53:23] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-08-09 02:53:23] [INFO    ] discord.client: logging in using static token
+[2023-08-09 02:53:25] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: cc045d0aa9417f9f692f9c6b45618bb9).
+[2023-08-09 02:53:45] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-08-09 02:53:45] [INFO    ] discord.client: logging in using static token
+[2023-08-09 02:54:25] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 214d2dd5fa0684d0902d44d1343f2d22).
+[2023-08-09 02:56:51] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-08-09 02:56:51] [INFO    ] discord.client: logging in using static token
+[2023-08-09 02:56:53] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 01dc0f70bfffd61bc73345b21e36a387).
+[2023-08-09 02:59:13] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-08-09 02:59:13] [INFO    ] discord.client: logging in using static token
+[2023-08-09 02:59:15] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 746a897eea0fccce2cf9191ccbc6aa60).
+[2023-08-09 03:00:15] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-08-09 03:00:15] [INFO    ] discord.client: logging in using static token
+[2023-08-09 03:00:17] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 8570cadae30290012d8c7e0b9606dfc5).
+[2023-08-09 03:01:43] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-08-09 03:01:43] [INFO    ] discord.client: logging in using static token
+[2023-08-09 03:01:45] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: bece314374e2c3ac876f6fb5489c3c6c).
+[2023-08-09 03:02:06] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-08-09 03:02:06] [INFO    ] discord.client: logging in using static token
+[2023-08-09 03:02:45] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: bed7d72dfb0d8ce9e78ec8c22cd1250c).
+[2023-08-09 03:03:40] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-08-09 03:03:40] [INFO    ] discord.client: logging in using static token
+[2023-08-09 03:03:42] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: d5eab8402943629c4ade2d4e38d85787).
+[2023-08-09 03:04:04] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-08-09 03:04:04] [INFO    ] discord.client: logging in using static token
+[2023-08-09 03:04:42] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: eaca303c1cb15b954914313e4d8d6ad1).
+[2023-08-09 03:04:53] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-08-09 03:04:53] [INFO    ] discord.client: logging in using static token
+[2023-08-09 03:04:54] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: a97d917d9b5ff81456e981af97e674e4).
+[2023-08-09 03:09:01] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-08-09 03:09:01] [INFO    ] discord.client: logging in using static token
+[2023-08-09 03:09:03] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: b1a486e36c32749dd2cfc0648aa1df85).
+[2023-10-11 17:09:21] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-10-11 17:09:21] [INFO    ] discord.client: logging in using static token
+[2023-10-11 17:09:23] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: f7a27818e922882963c935d460b4e274).
+[2023-10-11 17:09:26] [ERROR   ] discord.ext.tasks: Unhandled exception in internal background task 'taskYoutubeNotifier'.
+Traceback (most recent call last):
+  File "/root/desktop/Foop/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 239, in _loop
+    await self.coro(*args, **kwargs)
+  File "/root/desktop/Foop/cogs/youtube.py", line 109, in taskYoutubeNotifier
+    self.bot.isVideoShort(y7HlqCaOU94)
+AttributeError: 'Foop' object has no attribute 'isVideoShort'
+[2023-10-11 17:35:29] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-10-11 17:35:29] [INFO    ] discord.client: logging in using static token
+[2023-10-11 17:35:31] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: fe56e76697e4ed05fde43726d5e30631).
+[2023-10-11 17:35:33] [ERROR   ] discord.ext.tasks: Unhandled exception in internal background task 'taskYoutubeNotifier'.
+Traceback (most recent call last):
+  File "/root/desktop/Foop/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 239, in _loop
+    await self.coro(*args, **kwargs)
+  File "/root/desktop/Foop/cogs/youtube.py", line 109, in taskYoutubeNotifier
+    await self.isVideoShort(y7HlqCaOU94)
+NameError: name 'y7HlqCaOU94' is not defined
+[2023-10-11 17:36:53] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-10-11 17:36:53] [INFO    ] discord.client: logging in using static token
+[2023-10-11 17:36:55] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 0fc1ec57e5b57dccbcf216fed55f2110).
+[2023-10-11 17:38:37] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-10-11 17:38:37] [INFO    ] discord.client: logging in using static token
+[2023-10-11 17:38:39] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: da4ea872cbdcc518df0c0978f4ad38aa).
+[2023-10-11 17:39:04] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-10-11 17:39:04] [INFO    ] discord.client: logging in using static token
+[2023-10-11 17:39:39] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: e57d067dd082b28cf535a8e1777bdf63).
+[2023-10-11 17:41:56] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-10-11 17:41:56] [INFO    ] discord.client: logging in using static token
+[2023-10-11 17:41:58] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 29edffd464d32cb501db6f1311c1c87c).
+[2023-10-11 17:44:52] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-10-11 17:44:52] [INFO    ] discord.client: logging in using static token
+[2023-10-11 17:44:54] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: d9bd5020e58028d022cb8468deacd773).
+[2023-10-11 17:45:24] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-10-11 17:45:24] [INFO    ] discord.client: logging in using static token
+[2023-10-11 17:45:26] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 87f377360526a801077251dbe5118427).
+[2023-10-11 17:49:15] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-10-11 17:49:15] [INFO    ] discord.client: logging in using static token
+[2023-10-11 17:49:17] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 3e1ff7457fa61bf39b57e7881d3d7c1a).
+[2023-10-11 17:50:22] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-10-11 17:50:22] [INFO    ] discord.client: logging in using static token
+[2023-10-11 17:50:24] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 245687620692f96e98f6fbbbb30f45e0).
+[2023-10-11 17:52:58] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-10-11 17:52:58] [INFO    ] discord.client: logging in using static token
+[2023-10-11 17:53:00] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 7fd2feebae323216bba60602b47da13e).
+[2023-10-11 17:53:02] [ERROR   ] discord.client: Ignoring exception in on_ready
+Traceback (most recent call last):
+  File "/root/desktop/Foop/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/root/desktop/Foop/Foop.py", line 47, in on_ready
+    self.appInfo = await self.application_info()
+  File "/root/desktop/Foop/lib/python3.10/site-packages/discord/client.py", line 2488, in application_info
+    data = await self.http.application_info()
+  File "/root/desktop/Foop/lib/python3.10/site-packages/discord/http.py", line 738, in request
+    raise Forbidden(response, data)
+discord.errors.Forbidden: 403 Forbidden (error code: 40333): internal network error
+[2023-10-11 17:55:51] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-10-11 17:55:51] [INFO    ] discord.client: logging in using static token
+[2023-10-11 17:56:08] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-10-11 17:56:08] [INFO    ] discord.client: logging in using static token
+[2023-10-11 17:56:18] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-10-11 17:56:18] [INFO    ] discord.client: logging in using static token
+[2023-10-11 17:59:24] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-10-11 17:59:24] [INFO    ] discord.client: logging in using static token
+[2023-10-11 18:06:10] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-10-11 18:06:10] [INFO    ] discord.client: logging in using static token
+[2023-10-11 18:08:57] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-10-11 18:08:57] [INFO    ] discord.client: logging in using static token
+[2023-10-11 18:15:03] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-10-11 18:15:03] [INFO    ] discord.client: logging in using static token
+[2023-10-11 18:16:33] [INFO    ] discord.gateway: Shard ID None session has been invalidated.
+[2023-10-11 18:16:39] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 779ec344088d1d16d7b8010042195fc6).
+[2023-10-11 18:17:47] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-10-11 18:17:47] [INFO    ] discord.client: logging in using static token
+[2023-10-11 18:17:49] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: d37c613a2c8de2554de46483780df91c).
+[2023-10-11 18:20:32] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-10-11 18:20:32] [INFO    ] discord.client: logging in using static token
+[2023-10-11 18:20:33] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 0147f40eadafbbe5f33a94e5f86109ea).
+[2023-10-11 18:21:14] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-10-11 18:21:14] [INFO    ] discord.client: logging in using static token
+[2023-10-11 18:21:16] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 354db65c775b3158f7383fa86557b883).
+[2023-10-11 18:25:18] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-10-11 18:25:18] [INFO    ] discord.client: logging in using static token
+[2023-10-11 18:25:20] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 035a63e10fa62bb7e91a1258c6817658).
+[2023-10-11 18:25:39] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-10-11 18:25:39] [INFO    ] discord.client: logging in using static token
+[2023-10-11 18:26:20] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 02608594e575d47e47e2e0d92365412c).
+[2023-10-11 18:33:13] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-10-11 18:33:13] [INFO    ] discord.client: logging in using static token
+[2023-10-11 18:33:14] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 942c493c88fc83d905664709e8e35e86).
+[2023-10-11 18:35:06] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-10-11 18:35:06] [INFO    ] discord.client: logging in using static token
+[2023-10-11 18:35:08] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 676a104e5ace553800e82a86c404e6b3).
+[2023-10-11 18:44:25] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-10-11 18:44:25] [INFO    ] discord.client: logging in using static token
+[2023-10-11 18:44:27] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: d3f6ff493c6a0edd8107040475531ec4).
+[2023-10-11 18:44:41] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-10-11 18:44:41] [INFO    ] discord.client: logging in using static token
+[2023-10-11 18:45:27] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: ef0fa11d1f85d42734be2ddf6cce8d5b).
+[2023-10-11 21:16:35] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-10-11 21:16:35] [INFO    ] discord.client: logging in using static token
+[2023-10-11 21:16:37] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: f2716158c53070e340f13c6f1636c93f).
