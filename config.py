@@ -1,4 +1,0 @@
-TOKEN = "MTAxMjg5NTcxMjE3MTgwMjY1NA.GU1vMv.iYf-QXB-uR155699QryViteDdzP1JlefTUQ3-g"
-YOUTUBE_API_TOKEN ="AIzaSyAAoGqPpdkscKvsDRglAIjuJTBdncXsLyI"
-TWITCH_API_TOKEN ="ai3222kymb7rgw3jbe97qll6wc3wyy"
-TWITCH_API_CHANNEL_ID ="4mx1oq3htfmq5zirt8b9kugoivb6pi"
