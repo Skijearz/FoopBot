@@ -144,7 +144,8 @@ cython_debug/
 
 
 logs/
-
+.share/
+bin/
 config.py
 
 # End of https://www.toptal.com/developers/gitignore/api/python
