@@ -7,6 +7,7 @@ from datetime import datetime, timedelta,timezone
 from views.removeTwitchSub import removeTwitchSubView,removeTwitchSubDropDown
 import time
 import random
+from typing import cast
 
 OAUTH_URL = 'https://id.twitch.tv/oauth2/token?client_id={}&client_secret={}&grant_type=client_credentials'
 
@@ -31,13 +32,14 @@ class twitch(commands.Cog):
         print('Error in {0}: {1}'.format(interaction, error))
     
     async def cog_check(self,ctx):
-        print(ctx.author.guild_permissions.administrator)
-        return (ctx.author.guild_permissions.administrator)
+        member = cast(discord.Member, ctx.author)
+        return (member.guild_permissions.administrator)
     
     async def interaction_check(self,interaction: Interaction):
         if interaction.user == self.bot.appInfo.owner:
             return True
-        if not interaction.user.guild_permissions.administrator:
+        member = cast(discord.Member, interaction.user)
+        if not member.guild_permissions.administrator:
            await interaction.response.send_message("You dont have the required Permissions",ephemeral=True)
            return False
         return True
