@@ -21,4 +21,4 @@ soupsieve==2.4
 urllib3==1.26.15
 websockets==10.4
 yarl==1.8.1
-yt-dlp @ https://github.com/yt-dlp/yt-dlp/archive/master.tar.gz
+yt-dlp

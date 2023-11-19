@@ -28,7 +28,7 @@ class info(commands.Cog):
         botOwner = self.bot.appInfo.owner
         amountGuilds = len(self.bot.guilds)
         embed = discord.Embed(title=f'{self.bot.user.name} Stats', type="rich", color=EMBED_COLOR)
-        embed.set_thumbnail(url=self.bot.appInfo.icon.url)
+        #embed.set_thumbnail(url=self.bot.appInfo.icon.url)
         embed.add_field(name="Anti-Fairly Oddparent of: ",value=botOwner,inline=False)
         embed.add_field(name="#Server im watching: ",value=amountGuilds,inline=True)
         embed.add_field(name="#User im watching", value=len(self.bot.users),inline=True)
