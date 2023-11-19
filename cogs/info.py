@@ -22,13 +22,12 @@ class info(commands.Cog):
 
     @app_commands.command(name="info", description="Show some Information about Foop")
     async def info(self, interaction: Interaction):
-        print(f' yt :{self.bot.youtubeCheckerPing}')
         hours, rem = divmod(time.time()- self.bot.timeSinceStart,3600)
         minutes, seconds = divmod(rem,60)
         botOwner = self.bot.appInfo.owner
         amountGuilds = len(self.bot.guilds)
         embed = discord.Embed(title=f'{self.bot.user.name} Stats', type="rich", color=EMBED_COLOR)
-        #embed.set_thumbnail(url=self.bot.appInfo.icon.url)
+        embed.set_thumbnail(url=self.bot.appInfo.icon.url)
         embed.add_field(name="Anti-Fairly Oddparent of: ",value=botOwner,inline=False)
         embed.add_field(name="#Server im watching: ",value=amountGuilds,inline=True)
         embed.add_field(name="#User im watching", value=len(self.bot.users),inline=True)
