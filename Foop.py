@@ -85,6 +85,7 @@ async def main():
 
     async with ClientSession() as our_client :
         async with asqlite.connect("db/foopDatabase.db") as db_connection:
+                db_connection.execute("PRAGMA foreign_keys = ON")
                 exts = ['cogs.info','cogs.music','cogs.admin','cogs.almanaxAdmin','cogs.almanax','cogs.youtubeAdmin','cogs.youtube','cogs.twitchAdmin','cogs.twitch','cogs.short','cogs.steam','cogs.steamAdmin']
                 async with Foop(commands.when_mentioned_or('!'), web_client=our_client, db_client=db_connection,initial_extensions=exts,intents=intents,testing_guild_id=745495001622118501) as foopBot:
 

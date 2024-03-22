@@ -14,9 +14,11 @@ class steamAdmin(commands.Cog):
         async with self.bot.db_client.cursor() as cursor:
             await cursor.execute('''CREATE TABLE IF NOT EXISTS SteamAccount(SteamID PRIMARY KEY UNIQUE,DiscordAccountID Text, CONSTRAINT unqq UNIQUE(SteamID, DiscordAccountID))
                                 ''') 
-            await cursor.execute(''' CREATE TABLE IF NOT EXISTS WatchedPerfectGames(SteamID Text Not Null,AppID Text Not Null,
-                                FOREIGN KEY(SteamID) REFERENCES SteamAccount(SteamID), CONSTRAINT unq UNIQUE (SteamID, AppID))
+            await cursor.execute(''' CREATE TABLE IF NOT EXISTS WatchedPerfectGames(AppID PRIMARY KEY UNIQUE,NumberAchievementes Text Not Null)
                                 ''')
+            await cursor.execute('''
+                                 CREATE TABLE IF NOT EXISTS R_Games_Account(SteamID,AppID,FOREIGN KEY(SteamID) REFERENCES SteamAccount(SteamID) ON DELETE CASCADE, FOREIGN KEY(AppID) REFERENCES WatchedPerfectGames(AppID) ON DELETE CASCADE, CONSTRAINT uniq UNIQUE(SteamID,AppID))
+                                 ''')
             await self.bot.db_client.commit()
         await interaction.response.send_message("Steam Tables created!")
 
