@@ -22,7 +22,6 @@ class info(commands.Cog):
 
     @app_commands.command(name="info", description="Show some Information about Foop")
     async def info(self, interaction: Interaction):
-        print(f' yt :{self.bot.youtubeCheckerPing}')
         hours, rem = divmod(time.time()- self.bot.timeSinceStart,3600)
         minutes, seconds = divmod(rem,60)
         botOwner = self.bot.appInfo.owner

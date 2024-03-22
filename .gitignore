@@ -146,6 +146,7 @@ cython_debug/
 logs/
 share/
 bin/
+Scripts/
 config.py
 Scripts/
 docker-compose.debug.yml
