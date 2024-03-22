@@ -68,6 +68,7 @@ class YTDLSource(discord.PCMVolumeTransformer):
 
     @classmethod
     async def create_source(cls, interaction: Interaction, search: str, *, loop, download=False):
+
         loop = loop or asyncio.get_event_loop()
 
         to_run = partial(ytdl.extract_info, url=search, download=download)
@@ -77,12 +78,12 @@ class YTDLSource(discord.PCMVolumeTransformer):
             # take first item from a playlist
             data = data['entries'][0]
 
-        
         embed = discord.Embed(title="", description=f"Queued [{data['title']}]({data['webpage_url']}) [{interaction.user.mention}]", color=discord.Color.green())
         if interaction.response.is_done():
             await interaction.followup.send(embed=embed)
         else:
-            await interaction.response.send_message(embed=embed)
+            await interaction.response.defer()
+            await interaction.followup.send(embed=embed)
 
         if download:
             source = ytdl.prepare_filename(data)
