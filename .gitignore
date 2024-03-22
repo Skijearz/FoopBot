@@ -147,5 +147,6 @@ logs/
 share/
 bin/
 config.py
-
+Scripts/
+docker-compose.debug.yml
 # End of https://www.toptal.com/developers/gitignore/api/python
