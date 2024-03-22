@@ -3,8 +3,12 @@ version: '3.4'
 services:
   foopbot:
     image: foopbot
+    restart: always
     build:
       context: .
       dockerfile: ./Dockerfile
     environment:
-      TZ: Europe/Berlin
+      TZ: Europe/Berlina
+    volumes:
+      - ./db:/app/db
+      - ./logs:/app/logs
