@@ -30,7 +30,6 @@ class steam(commands.Cog):
         await interaction.response.defer()
         allOwnedGames = await self.getAllOwnedGamesOfSteamID(steamid)
         perfectGames = await self.getAllPerfectGamesOfOwnedGames(steamid,allOwnedGames)
-
         if len(perfectGames) >= 1:
             await self.storeSteamUserAccount(steamid,user)
             await self.storePerfectGamesOfSteamAccount(steamid,perfectGames)
@@ -104,36 +103,42 @@ class steam(commands.Cog):
 
     @tasks.loop(seconds=18000)
     async def check_perfect_games(self):
-        async with self.bot.db_client.cursor() as cursor:
-            await cursor.execute(''' SELECT * FROM WatchedPerfectGames
-                                ''')
-            result = await cursor.fetchall()
-            if len(result) > 0:
-                tasks = []
-                changed_games: list
-                for games in result:
-                    appid = games[0]
-                    number_achievements = games[1]
-                    task = asyncio.ensure_future(self.get_all_games_with_new_achievements(appid,number_achievements)) 
-                    tasks.append(task)
-                    changed_games = await asyncio.gather(*tasks, return_exceptions=True)
-            changed_games = list(filter(lambda item: item is not None,changed_games))
-            if len(changed_games) > 0:
-                await self.notify_users(changed_games)
-                await self.delete_perfect_game(changed_games)
+        try:
+            async with self.bot.db_client.cursor() as cursor:
+                await cursor.execute(''' SELECT * FROM WatchedPerfectGames
+                                    ''')
+                result = await cursor.fetchall()
+                if len(result) > 0:
+                    tasks = []
+                    changed_games: list
+                    for games in result:
+                        appid = games[0]
+                        number_achievements = games[1]
+                        task = asyncio.ensure_future(self.get_all_games_with_new_achievements(appid,number_achievements)) 
+                        tasks.append(task)
+                        changed_games = await asyncio.gather(*tasks, return_exceptions=True)
+                    changed_games = list(filter(lambda item: item is not None,changed_games))
+                    if len(changed_games) > 0:
+                        await self.notify_users(changed_games)
+                        await self.delete_perfect_game(changed_games)
+        except Exception as e:
+            print(e)
 
     @tasks.loop(hours=24)
     async def check_unused_games(self):
-        async with self.bot.db_client.cursor() as cursor:
-            await cursor.execute(''' SELECT * FROM WatchedPerfectGames WHERE AppID NOT IN (SELECT AppID FROM R_Games_Account)
-                                ''')
-            result = await cursor.fetchall()
-            if len(result) > 0:
-                for game in result:
-                    appid = game[0]
-                    await cursor.execute(''' DELETE FROM WatchedPerfectGames WHERE AppID=? 
-                                ''',(appid))
-                    await self.bot.db_client.commit()
+        try:
+            async with self.bot.db_client.cursor() as cursor:
+                await cursor.execute(''' SELECT * FROM WatchedPerfectGames WHERE AppID NOT IN (SELECT AppID FROM R_Games_Account)
+                                    ''')
+                result = await cursor.fetchall()
+                if len(result) > 0:
+                    for game in result:
+                        appid = game[0]
+                        await cursor.execute(''' DELETE FROM WatchedPerfectGames WHERE AppID=? 
+                                    ''',(appid))
+                        await self.bot.db_client.commit()
+        except Exception as e:
+            print(e)
 
 
     @check_perfect_games.before_loop
