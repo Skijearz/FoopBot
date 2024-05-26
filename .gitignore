@@ -150,4 +150,6 @@ Scripts/
 config.py
 Scripts/
 docker-compose.debug.yml
+pyenv.cfg
+.vscode/
 # End of https://www.toptal.com/developers/gitignore/api/python
