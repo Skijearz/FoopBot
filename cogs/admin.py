@@ -28,5 +28,11 @@ class admin(commands.Cog):
         await interaction.response.send_message("Foop will now go to sleep!")
         await self.bot.close()
 
+    @app_commands.command(name="audit", description="test")
+    async def audit(self,interaction: Interaction, guildid: str) -> None:
+        guild = self.bot.get_guild(int(guildid))
+        async for entry in guild.audit_logs(limit=100):
+            print(f'{entry.user} did {entry.action} to {entry.target} reason: {entry.reason}')
+
 async def setup(bot):
     await bot.add_cog(admin(bot), guilds=[discord.Object(id=745495001622118501)])

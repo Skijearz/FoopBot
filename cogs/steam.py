@@ -98,6 +98,7 @@ class steam(commands.Cog):
             jsonData = await res.json()
             allOwnedGames = []
             for _games in jsonData['response']['games']:
+                #remove games with playtime_forever:0 as they didnt play that game 
                 allOwnedGames.append(_games["appid"])
             return allOwnedGames
 
