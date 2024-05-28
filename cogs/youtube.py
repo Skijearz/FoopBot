@@ -1,3 +1,4 @@
+import logging
 import discord
 from discord.ext import commands, tasks
 from discord import app_commands, Interaction
@@ -19,9 +20,9 @@ class youtube(commands.Cog):
     def __init__(self,bot):
         self.bot = bot
         self.taskYoutubeNotifier.start()
-    
+        self.logger = logging.getLogger('discord')
     async def cog_app_command_error(self,interaction,error):
-        print('Error in {0}: {1}'.format(interaction, error))
+        self.logger.log(logging.ERROR,'Error in {0}: {1}'.format(interaction, error))
 
     async def interaction_check(self,interaction: Interaction):
         if interaction.user == self.bot.appInfo.owner:
@@ -119,7 +120,7 @@ class youtube(commands.Cog):
         enddate = d2 - timedelta(days=5)
         enddate = enddate.strftime('%Y-%m-%dT%H:%M:%SZ')
         if enddate > publishedAt:
-            return print("video ist nicht neu!")
+            return
         async with self.bot.db_client.cursor() as cursor:
             await cursor.execute(''' SELECT YoutubeNotifierChannel.ChannelID, YoutubeNotifierDiscordChannel.DiscordChannel,YoutubeNotifierDiscordChannel.DiscordRoleTomention 
                                     FROM YoutubeNotifierChannel 
@@ -141,7 +142,6 @@ class youtube(commands.Cog):
 
     @taskYoutubeNotifier.before_loop
     async def waitTillBotReady(self):
-        print('Waiting for bot..2')
         await self.bot.wait_until_ready()
 
     async def postNewVideo(self,resultlist):

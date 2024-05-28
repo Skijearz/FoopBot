@@ -1,3 +1,4 @@
+import logging
 import discord
 from discord.ext import commands
 from discord import app_commands, Interaction
@@ -12,10 +13,10 @@ URL = "https://dofuswiki.fandom.com/wiki/Almanax/Offerings"
 class almanaxAdmin(commands.Cog):
     def __init__(self,bot):
         self.bot = bot
-    
+        self.logger = logging.getLogger('discord')
 
     async def cog_app_command_error(self,interaction,error):
-        print('Error in {0}: {1}'.format(interaction, error))
+        self.logger.log(logging.ERROR,'Error in {0}: {1}'.format(interaction, error))
 
     
     @app_commands.command(name="createalmanaxtable",description="re-creates the alamanx discorchannel table")

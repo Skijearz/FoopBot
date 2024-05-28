@@ -1,3 +1,4 @@
+import logging
 from discord.ext import commands, tasks
 from discord import app_commands, Interaction
 import discord
@@ -16,6 +17,7 @@ class steam(commands.Cog):
         self.bot.steamwebapikey = config.STEAM_WEB_API_KEY
         self.check_perfect_games.start()
         self.check_unused_games.start()
+        self.logger = logging.getLogger('discord')
 
     async def cog_app_command_error(self, interaction: Interaction, error: app_commands.AppCommandError) -> None:
         return await super().cog_app_command_error(interaction, error)
@@ -123,7 +125,7 @@ class steam(commands.Cog):
                         await self.notify_users(changed_games)
                         await self.delete_perfect_game(changed_games)
         except Exception as e:
-            print(e)
+            self.logger.log(logging.ERROR, e)
 
     @tasks.loop(hours=24)
     async def check_unused_games(self):
@@ -139,7 +141,7 @@ class steam(commands.Cog):
                                     ''',(appid))
                         await self.bot.db_client.commit()
         except Exception as e:
-            print(e)
+            self.logger.log(logging.ERROR, e)
 
 
     @check_perfect_games.before_loop

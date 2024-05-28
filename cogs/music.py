@@ -1,3 +1,4 @@
+import logging
 import discord
 from discord.ext import commands
 import random
@@ -112,14 +113,14 @@ class MusicPlayer:
     When the bot disconnects from the Voice it's instance will be destroyed.
     """
 
-    __slots__ = ('bot', '_guild', '_channel', '_cog', 'queue', 'next', 'current', 'np', 'volume')
+    __slots__ = ('bot', '_guild', '_channel', '_cog', 'queue', 'next', 'current', 'np', 'volume','logger')
 
     def __init__(self,bot, interaction,cog):
         self.bot = bot
         self._guild = interaction.guild
         self._channel = interaction.channel
         self._cog = cog
-
+        self.logger = logging.getLogger('discord')
         self.queue = asyncio.Queue()
         self.next = asyncio.Event()
 
@@ -178,7 +179,7 @@ class Music(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
         self.players = {}
-
+        self.logger = logging.getLogger('discord')
     async def cleanup(self, guild):
         try:
             await guild.voice_client.disconnect()
@@ -198,8 +199,8 @@ class Music(commands.Cog):
             await ctx.send('Error connecting to Voice Channel. '
                            'Please make sure you are in a valid channel or provide me with one')
 
-        print('Ignoring exception in command {}:'.format(ctx.command), file=sys.stderr)
-        traceback.print_exception(type(error), error, error.__traceback__, file=sys.stderr)
+        self.logger.log(logging.ERROR,'Ignoring exception in command {}:'.format(ctx.command))
+        self.logger.log(logging.ERROR,traceback.print_exception(type(error), error, error.__traceback__))
 
     def get_player(self, interaction):
         """Retrieve the guild player, or generate one."""
@@ -362,7 +363,6 @@ class Music(commands.Cog):
     async def queue_info(self, interaction: Interaction):
         """Retrieve a basic queue of upcoming songs."""
         vc = interaction.guild.voice_client
-        print(vc.is_connected())
 
 
         if not vc or not vc.is_connected():

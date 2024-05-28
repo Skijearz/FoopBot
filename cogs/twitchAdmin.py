@@ -1,3 +1,4 @@
+import logging
 import discord
 from discord.ext import commands
 from discord import app_commands, Interaction
@@ -6,10 +7,10 @@ from discord import app_commands, Interaction
 class twitchAdmin(commands.Cog):
     def __init__(self,bot):
         self.bot = bot
-
+        self.logger = logging.getLogger('discord')
     
     async def cog_app_command_error(self,interaction,error):
-        print('Error in {0}: {1}'.format(interaction, error))
+        self.logger.log(logging.ERROR,'Error in {0}: {1}'.format(interaction, error))
 
     @app_commands.command(name="createtwitchtables")
     async def createTwitchTables(self,interaction: Interaction):

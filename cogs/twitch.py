@@ -1,3 +1,4 @@
+import logging
 import discord
 from discord.ext import commands, tasks
 from discord import app_commands, Interaction
@@ -27,9 +28,9 @@ class twitch(commands.Cog):
         self.tokenType = None
         self.createOAuthToken.start()
         self.taskTwitchStream.start()
-    
+        self.logger = logging.getLogger('discord')
     async def cog_app_command_error(self,interaction,error):
-        print('Error in {0}: {1}'.format(interaction, error))
+        self.logger.log(logging.ERROR,'Error in {0}: {1}'.format(interaction, error))
     
     async def cog_check(self,ctx):
         member = cast(discord.Member, ctx.author)
@@ -127,7 +128,6 @@ class twitch(commands.Cog):
 
     @taskTwitchStream.before_loop
     async def waitTillBotReady(self):
-        print('Waiting for bot..')
         await self.bot.wait_until_ready()
     
     async def checkForLiveStream(self,resultSet):

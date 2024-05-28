@@ -1,3 +1,4 @@
+import logging
 from discord.ext import commands, tasks
 from discord import app_commands, Interaction
 import discord
@@ -5,9 +6,9 @@ import discord
 class steamAdmin(commands.Cog):
     def __init__(self,bot):
         self.bot = bot 
-
+        self.logger = logging.getLogger('discord')
     async def cog_app_command_error(self,interaction,error):
-        print('Error in {0}: {1}'.format(interaction, error))
+        self.logger.log(logging.ERROR,'Error in {0}: {1}'.format(interaction, error))
 
     @app_commands.command(name="createsteamdb",description="creates db table for watchperfect games")
     async def createsteamdb(self,interaction: discord.Interaction):

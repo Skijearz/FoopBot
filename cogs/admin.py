@@ -1,14 +1,15 @@
 import discord
 from discord.ext import commands
 from discord import app_commands, Interaction
-
+import logging
 
 class admin(commands.Cog):
     def __init__(self,bot):
         self.bot = bot
+        self.logger = logging.getLogger('discord')
 
     async def cog_app_command_error(self,interaction,error):
-        print('Error in {0}: {1}'.format(interaction, error))
+        self.logger.log(logging.ERROR,'Error in {0}: {1}'.format(interaction, error))
 
     async def cog_check(self,ctx):
         return await ctx.bot.is_owner(ctx.author)
@@ -32,7 +33,7 @@ class admin(commands.Cog):
     async def audit(self,interaction: Interaction, guildid: str) -> None:
         guild = self.bot.get_guild(int(guildid))
         async for entry in guild.audit_logs(limit=100):
-            print(f'{entry.user} did {entry.action} to {entry.target} reason: {entry.reason}')
+            await interaction.response.send_message(f'{entry.user} did {entry.action} to {entry.target} reason: {entry.reason}')
 
 async def setup(bot):
     await bot.add_cog(admin(bot), guilds=[discord.Object(id=745495001622118501)])
