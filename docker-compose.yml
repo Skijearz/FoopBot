@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: ./Dockerfile
     environment:
-      TZ: Europe/Berlina
+      TZ: Europe/Berlin
     volumes:
       - ./db:/app/db
       - ./logs:/app/logs
