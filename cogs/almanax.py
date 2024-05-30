@@ -2,9 +2,9 @@ import asqlite
 import logging
 import calendar
 import discord
-from discord.ext import commands
+from discord.ext import commands,tasks
 from discord import app_commands, Interaction
-from datetime import datetime
+from datetime import datetime, time
 from bs4 import BeautifulSoup
 from utils import exp_constants
 from utils import kamas_constants
@@ -20,7 +20,7 @@ ITEMS_EMOJI = "<:items:1245024685473792020>"
 ALMOKEN_EMOJI ="<:almoken:1245027986558681088>"
 DOLMANAX_ICON ="https://static.wikia.nocookie.net/dofus/images/c/c4/Dolmanax.png/revision/latest/scale-to-width-down/120?cb=20171120092828"
 SEARCH_FOR_QUEST_FROM_ALMANAX = "/quests?startCriterion[$regex]=Ad={almanax_id}"
-
+ALMANAX_RESET_TIME = time(hour=0,minute=0)
 user_agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36'
 headers={'accept-language' :'en-US,en;q=0.9','Cache-Control': 'no-cache','User-Agent' : 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36'}
 
@@ -29,6 +29,8 @@ class almanax(commands.Cog):
     def __init__(self,bot):
         self.bot = bot
         self.logger = logging.getLogger('discord')
+        self.post_almanax_in_channels.start()
+
     async def cog_app_command_error(self,interaction,error):
         self.logger.log(logging.ERROR,'Error in {0}: {1}'.format(interaction, error))
 
@@ -49,6 +51,34 @@ class almanax(commands.Cog):
         embed = await self.getAlmanax(almanax_day)
         await interaction.followup.send(embed=embed) 
 
+    @app_commands.command(name="almanax_setup", description="Sets the bot up to post almanax every day on reset")
+    async def create_almanax_notifier_channerl(self, interaction: Interaction):
+        dc_channel = interaction.channel
+        if dc_channel is None:
+            return await interaction.response.send_message("Channel not found, try again")
+        async with self.bot.db_client.cursor() as cursor:
+            await cursor.execute(''' INSERT OR IGNORE INTO AlmanaxChannel values(?)
+            ''',dc_channel.id)
+            await self.bot.db_client.commit()
+        await interaction.response.send_message("Almanax will be posted in this channel on reset")
+    
+    @tasks.loop(time=ALMANAX_RESET_TIME)
+    async def post_almanax_in_channels(self):
+        almanax_day = datetime.now()
+        almanax_embed = await self.getAlmanax(almanax_day)
+        
+        async with self.bot.db_client.cursor() as cursor:
+            await cursor.execute('''SELECT * FROM AlmanaxChannel ''')
+            result = await cursor.fetchall()
+            if len(result)== 0: return
+            for text_channel in result:
+                dc_channel = self.bot.get_channel(int(text_channel[0]))
+                if dc_channel is None: continue
+                await dc_channel.send(embed=almanax_embed)
+
+    @post_almanax_in_channels.before_loop
+    async def waitTillBotReady(self):
+        await self.bot.wait_until_ready() 
 
     async def getAlmanax(self,almanax_day: datetime) -> discord.Embed:
         #EVTL AUF discord.py mit voice support wechseln, gerade ohne installiert nicht sicher ob bot funktional!
@@ -83,7 +113,7 @@ class almanax(commands.Cog):
         almanax_embed.add_field(name="Bonus", value=f"> {almanax_bonus}", inline=False)
         almanax_embed.add_field(name=almanax_goddess,value=f"{ITEMS_EMOJI} **{almanax_item_quantity}** x **{almanax_item_name}**", inline=False)
         almanax_embed.add_field(name="Rewards for Level 200", value=f"{ALMOKEN_EMOJI} {almanax_almoken_quantity}x Almoken\n {KAMAS_EMOJI} {int(kamas_reward)}\n {XP_EMOJI} {int(xp_reward)}", inline=False)
-        if(self.bot.appInfo.icon is None):
+        if(self.bot.appInfo):
             url = ""
         else:
             url= self.bot.appInfo.icon.url
