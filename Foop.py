@@ -69,7 +69,8 @@ async def main():
 
     if not os.path.isdir("db"):
         os.mkdir("db")
-
+    if not os.path.isdir("logs"):
+        os.mkdir("logs")
 
     logger = logging.getLogger('discord')
     logger.setLevel(logging.INFO)
