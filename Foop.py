@@ -67,6 +67,10 @@ class Foop(commands.Bot):
 
 async def main():
 
+    if not os.path.isdir("db"):
+        os.mkdir("db")
+
+
     logger = logging.getLogger('discord')
     logger.setLevel(logging.INFO)
 
