@@ -153,5 +153,5 @@ docker-compose.debug.yml
 pyenv.cfg
 .vscode/
 requirements copy.txt
-db/foopDatabase.db
+foopDatabase.db
 # End of https://www.toptal.com/developers/gitignore/api/python
