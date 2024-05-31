@@ -9,6 +9,7 @@ from bs4 import BeautifulSoup
 from utils import exp_constants
 from utils import kamas_constants
 from zoneinfo import ZoneInfo
+import zoneinfo
 
 EMBED_COLOR = 0xebeb33
 DOFUSDB_API_URL = "https://api.dofusdb.fr"
@@ -106,14 +107,15 @@ class almanax(commands.Cog):
 
         xp_reward = exp_constants.EXP_LEVEL_BASE_REWARD.get(200)*almanax_quest_duratio*almanax_quest_xpratio
         kamas_reward = kamas_constants.KAMAS_LEVEL_BASE_REWARD.get(200)*almanax_quest_duratio*almanax_quest_kamasratio
-        
+        formatted_kamas = '{:,}'.format(int(kamas_reward),'d').replace(',',' ')
+        formatted_xp = '{:,}'.format(int(xp_reward),'d').replace(',',' ')
 
         almanax_embed  = discord.Embed(title=f'Almanax : {almanax_day.day} {calendar.month_name[almanax_day.month]} {almanax_day.year}',url=f"https://dofusdb.fr/en/database/quest/{almanax_quest_id}", type="rich", color=EMBED_COLOR)
         almanax_embed.set_thumbnail(url=almanax_item_image)
         almanax_embed.set_author(name=f'Almanax',icon_url=DOLMANAX_ICON)
         almanax_embed.add_field(name="Bonus", value=f"> {almanax_bonus}", inline=False)
         almanax_embed.add_field(name=almanax_goddess,value=f"{ITEMS_EMOJI} **{almanax_item_quantity}** x **{almanax_item_name}**", inline=False)
-        almanax_embed.add_field(name="Rewards for Level 200", value=f"{ALMOKEN_EMOJI} {almanax_almoken_quantity}x Almoken\n {KAMAS_EMOJI} {int(kamas_reward)}\n {XP_EMOJI} {int(xp_reward)}", inline=False)
+        almanax_embed.add_field(name="Rewards for Level 200", value=f"{ALMOKEN_EMOJI} {almanax_almoken_quantity}x Almoken\n {KAMAS_EMOJI} {formatted_kamas}\n {XP_EMOJI} {formatted_xp}", inline=False)
         if(self.bot.appInfo):
             url = ""
         else:
