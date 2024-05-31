@@ -8,7 +8,7 @@ from datetime import datetime, time
 from bs4 import BeautifulSoup
 from utils import exp_constants
 from utils import kamas_constants
-import pytz
+from zoneinfo import ZoneInfo
 
 EMBED_COLOR = 0xebeb33
 DOFUSDB_API_URL = "https://api.dofusdb.fr"
@@ -21,8 +21,7 @@ ITEMS_EMOJI = "<:items:1245024685473792020>"
 ALMOKEN_EMOJI ="<:almoken:1245027986558681088>"
 DOLMANAX_ICON ="https://static.wikia.nocookie.net/dofus/images/c/c4/Dolmanax.png/revision/latest/scale-to-width-down/120?cb=20171120092828"
 SEARCH_FOR_QUEST_FROM_ALMANAX = "/quests?startCriterion[$regex]=Ad={almanax_id}"
-TIME_ZONE = pytz.timezone("Europe/Berlin")
-ALMANAX_RESET_TIME = time(hour=0,minute=0, tzinfo=TIME_ZONE)
+ALMANAX_RESET_TIME = time(hour=0,minute=0, tzinfo=ZoneInfo("Europe/Berlin"))
 user_agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36'
 headers={'accept-language' :'en-US,en;q=0.9','Cache-Control': 'no-cache','User-Agent' : 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36'}
 
