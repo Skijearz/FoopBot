@@ -6,7 +6,7 @@ import config
 import asyncio
 
 GET_PLAYER_ACHIEVEMENTS_URL = "https://api.steampowered.com/ISteamUserStats/GetPlayerAchievements/v0001/?appid={}&key={}&steamid={}"
-GET_OWNED_GAMES_URL ="http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key={}&steamid={}&format=json"
+GET_OWNED_GAMES_URL ="http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key={}&steamid={}&format=json&include_played_free_games=true"
 STEAM_PROFILE_URL = "https://steamcommunity.com/profiles/{}"
 GAME_INFO_URL ="https://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key={}&appid={}"
 GAME_STORE_SITE ="https://store.steampowered.com/app/{}"
