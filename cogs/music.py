@@ -29,7 +29,8 @@ ytdlopts = {
     'quiet': True,
     'no_warnings': True,
     'default_search': 'auto',
-    'source_address': '0.0.0.0'  # ipv6 addresses cause issues sometimes
+    'source_address': '0.0.0.0',  # ipv6 addresses cause issues sometimes
+
 }
 
 ffmpegopts = {
@@ -74,7 +75,7 @@ class YTDLSource(discord.PCMVolumeTransformer):
 
         to_run = partial(ytdl.extract_info, url=search, download=download)
         data = await loop.run_in_executor(None, to_run)
-
+        print(data)
         if 'entries' in data:
             # take first item from a playlist
             data = data['entries'][0]
