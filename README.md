@@ -84,3 +84,4 @@ Uses various API's and therefore needs some API_KEYS to work (e.g. YouTube,Twitc
     docker compose build
     docker compose up -d
    ```
+**Commands**: All the commands available are discord slash commands so you can get a preview of all commands if you type `/` into the chat.
