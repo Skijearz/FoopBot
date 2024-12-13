@@ -93,7 +93,7 @@ class almanax(commands.Cog):
 
         #Item Relevant Info
         almanax_item_name = almanax_item['name']['en']
-        almanax_item_image = almanax_item['imgset'][-1]['url']
+        almanax_item_image = almanax_item['img']
         almanax_item_quantity = almanax_quest['data'][0]['steps'][0]['objectives'][0]['need']['generated']['quantities'][0]
 
         #Queste relevant Info
