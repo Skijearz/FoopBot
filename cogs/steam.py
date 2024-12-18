@@ -22,7 +22,7 @@ class steam(commands.Cog):
         return await super().cog_app_command_error(interaction, error)
 
 
-    async def check_for_valid_steam64id(steam_id: str):
+    async def check_for_valid_steam64id(steamid: str):
         if re.fullmatch(r'\d{17}', steamid):
             return True
         return False
