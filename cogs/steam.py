@@ -4,6 +4,7 @@ from discord import app_commands, Interaction
 import discord
 import config
 import asyncio
+import re
 
 GET_PLAYER_ACHIEVEMENTS_URL = "https://api.steampowered.com/ISteamUserStats/GetPlayerAchievements/v0001/?appid={}&key={}&steamid={}"
 GET_OWNED_GAMES_URL ="http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key={}&steamid={}&format=json&include_played_free_games=true"
