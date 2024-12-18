@@ -10,7 +10,6 @@ GET_OWNED_GAMES_URL ="http://api.steampowered.com/IPlayerService/GetOwnedGames/v
 STEAM_PROFILE_URL = "https://steamcommunity.com/profiles/{}"
 GAME_INFO_URL ="https://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key={}&appid={}"
 GAME_STORE_SITE ="https://store.steampowered.com/app/{}"
-#SELECT SteamAccount.SteamID, SteamAccount.DiscordAccountID, WatchedPerfectGames.AppID FROM SteamAccount INNER JOIN WatchedPerfectGames On SteamAccount.SteamID = WatchedPerfectGames.SteamID Where AppID = 730;
 class steam(commands.Cog):
     def __init__(self,bot):
         self.bot = bot 
@@ -23,13 +22,24 @@ class steam(commands.Cog):
         return await super().cog_app_command_error(interaction, error)
 
 
+    async def check_for_valid_steam64id(steam_id: str):
+        if re.fullmatch(r'\d{17}', steamid):
+            return True
+        return False
 
+    
     @app_commands.command(name="watchperfectgames", description="Watches your perfect games on Steam and notifies you if a game gets new Achievements")
+    @app_commands.describe(steamid="Please enter your SteamID64, which must be exactly 17 digits long. It should contain only numbers, without any spaces or special characters.")
     async def watchperfectgames(self, interaction: Interaction,steamid: str):
         #Get all owned games of specified steamid
-        #discordUser = interaction.user if discordusertomention == None else discordusertomention 
         user = interaction.user
         await interaction.response.defer()
+        #basic check to see if entered steamid is just the 17 digit long steamid64 representation and not a url or a custom profilename
+        #TODO Add either check for steamurls 
+        #TODO Add functionality to check if steamid is valid by requesting the UserSummaries API-Endpoint
+        if not await check_for_valid_steam64id(steamid):
+            await interaction.followup.send(f"Steamid {steamid} is not a valid steamid64 please enter only your 17-Number long Steamid.If you have trouble finding your steamid try this website https://steamid.io/", ephemeral=True)
+            return
         allOwnedGames = await self.getAllOwnedGamesOfSteamID(steamid)
         perfectGames = await self.getAllPerfectGamesOfOwnedGames(steamid,allOwnedGames)
         if len(perfectGames) >= 1:
