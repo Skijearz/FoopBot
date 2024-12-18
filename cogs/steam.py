@@ -33,7 +33,7 @@ class steam(commands.Cog):
     async def watchperfectgames(self, interaction: Interaction,steamid: str):
         #Get all owned games of specified steamid
         user = interaction.user
-        await interaction.response.defer()
+        await interaction.response.defer(ephemeral=True)
         #basic check to see if entered steamid is just the 17 digit long steamid64 representation and not a url or a custom profilename
         #TODO Add either check for steamurls 
         #TODO Add functionality to check if steamid is valid by requesting the UserSummaries API-Endpoint
