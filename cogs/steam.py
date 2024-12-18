@@ -39,7 +39,7 @@ class steam(commands.Cog):
         #TODO Add either check for steamurls 
         #TODO Add functionality to check if steamid is valid by requesting the UserSummaries API-Endpoint
         if not await self.check_for_valid_steam64id(steamid):
-            await interaction.followup.send(f"Steamid {steamid} is not a valid steamid64 please enter only your 17-Number long Steamid.If you have trouble finding your steamid try this website https://steamid.io/", ephemeral=True)
+            await interaction.followup.send(f"Steamid {steamid} is not a valid steamid64 please enter only your 17 digit long Steamid. If you have trouble finding your steamid try this website https://steamid.io/", ephemeral=True)
             return
         allOwnedGames = await self.getAllOwnedGamesOfSteamID(steamid)
         perfectGames = await self.getAllPerfectGamesOfOwnedGames(steamid,allOwnedGames)
