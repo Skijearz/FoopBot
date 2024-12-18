@@ -22,7 +22,7 @@ class steam(commands.Cog):
         return await super().cog_app_command_error(interaction, error)
 
 
-    async def check_for_valid_steam64id(steamid: str):
+    async def check_for_valid_steam64id(steamid: str)-> bool:
         if re.fullmatch(r'\d{17}', steamid):
             return True
         return False
@@ -37,7 +37,7 @@ class steam(commands.Cog):
         #basic check to see if entered steamid is just the 17 digit long steamid64 representation and not a url or a custom profilename
         #TODO Add either check for steamurls 
         #TODO Add functionality to check if steamid is valid by requesting the UserSummaries API-Endpoint
-        if not await check_for_valid_steam64id(steamid):
+        if not await self.check_for_valid_steam64id(steamid):
             await interaction.followup.send(f"Steamid {steamid} is not a valid steamid64 please enter only your 17-Number long Steamid.If you have trouble finding your steamid try this website https://steamid.io/", ephemeral=True)
             return
         allOwnedGames = await self.getAllOwnedGamesOfSteamID(steamid)
