@@ -157,7 +157,7 @@ class youtube(commands.Cog):
 ############################################################################################## HELPER FUNCTIONS ###################################################
     async def isVideoShort(self,videoID):
         url = f'https://www.youtube.com/shorts/{videoID}'
-        async with self.bot.web_client.head(url,headers=headers,cookies={"CONSENT": "YES+"}) as r:
+        async with self.bot.web_client.head(url,headers=headers,cookies={"SOCS": "CAESEwgDEgk0ODE3Nzk3MjQaAmVuIAEaBgiA_LyaBg"}) as r:
             return r.status == 200
             
     async def getChannelName(self,ChannelID):
