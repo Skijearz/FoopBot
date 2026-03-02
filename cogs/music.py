@@ -15,8 +15,7 @@ import os
 
 from discord import app_commands, Interaction
 
-# Suppress noise about console usage from errors
-yt_dlp.utils.bug_reports_message = lambda:''
+
 
 ytdlopts = {
     'format': 'bestaudio/best',
